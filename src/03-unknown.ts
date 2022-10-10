@@ -15,6 +15,7 @@ const parse = (str: string): unknown => {
     return JSON.parse(str);
 }
 
-if (unknownVar === 'boolean') {
+if (typeof unknownVar === 'boolean') {
     let isNew: boolean = unknownVar;
+    console.log(isNew);
 }
