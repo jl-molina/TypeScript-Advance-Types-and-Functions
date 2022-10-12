@@ -1,6 +1,6 @@
 import { Product } from './product.model';
-import { CreateProductDto, UpdateProductDto } from './product.dto';
-import { faker, InternetModule } from '@faker-js/faker';
+import { CreateProductDto, UpdateProductDto, FindProductDto } from './product.dto';
+import { faker } from '@faker-js/faker';
 
 const products: Product[] = [];
 
@@ -42,4 +42,8 @@ const deleteProduct = (id: string, changes: Product) => {
     // code
 }
 
-export { products, addProduct, updateProduct, getProduct, deleteProduct }
+const findProducts = (dto: FindProductDto): Product[] => {
+    return products;
+}
+
+export { products, addProduct, updateProduct, getProduct, deleteProduct, findProducts }

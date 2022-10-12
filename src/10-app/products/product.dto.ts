@@ -8,8 +8,12 @@ interface UpdateProductDto extends Partial<CreateProductDto> {
 
 }
 
+interface FindProductDto extends Readonly<Partial<Product>> {
+
+}
+
 type example = Pick<Product, 'color' | 'description'>;
 
 type example2 = Required<Product>;
 
-export { CreateProductDto, UpdateProductDto }
+export { CreateProductDto, UpdateProductDto, FindProductDto }
