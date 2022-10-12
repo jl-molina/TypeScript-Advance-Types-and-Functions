@@ -4,12 +4,10 @@ interface CreateProductDto extends Omit<Product, 'id' | 'createdAt' | 'updatedAt
     categoryId: string    
 }
 
-interface UpdateProductDto extends Partial<CreateProductDto> {
+interface UpdateProductDto extends Partial<CreateProductDto> {}
 
-}
-
-interface FindProductDto extends Readonly<Partial<Product>> {
-
+interface FindProductDto extends Readonly<Partial<Omit<Product, 'tags'>>> {
+    readonly tags: ReadonlyArray<string>;
 }
 
 type example = Pick<Product, 'color' | 'description'>;

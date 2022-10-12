@@ -42,6 +42,10 @@ const deleteProduct = (id: string, changes: Product) => {
 }
 
 const findProducts = (dto: FindProductDto): Product[] => {
+    //doesn't allow to mutate because we defined a readonly attribute and utility type in the product.dto
+    // dto.tags = [];
+    // dto.tags?.pop();
+    // dto.tags?.push();
     return products;
 }
 
