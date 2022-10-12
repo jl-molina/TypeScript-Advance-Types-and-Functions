@@ -1,9 +1,9 @@
-import { BaseModel } from './../base.model';
-import { Category } from './../categories/category.model';
+import { BaseModel } from '../base.model';
+import { Category } from '../categories/category.model';
 
-export type Sizes = 'S' | 'M' | 'L' | 'XL';
+type Sizes = 'S' | 'M' | 'L' | 'XL';
 
-export interface Product extends BaseModel {
+interface Product extends BaseModel {
     title: string,
     image: string,
     description: string,
@@ -15,3 +15,5 @@ export interface Product extends BaseModel {
     isNew: boolean,
     tags: string[]
 }
+
+export { Sizes, Product }
